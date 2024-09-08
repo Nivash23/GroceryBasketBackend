@@ -1,7 +1,7 @@
 const RegistrationRouter = require('express').Router();
 const User = require('../Models/Registration');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const {JWT_SECRET}=require('../utils/config')
 
 RegistrationRouter.post('/', async (req, res) => {
