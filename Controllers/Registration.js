@@ -16,7 +16,7 @@ RegistrationRouter.post('/', async (req, res) => {
     }
     else {
         
-        const hashpassword = await bcrypt.hash(Password, 10);
+        const hashpassword =bcrypt.hash(Password, 10);
 
         const newuser = new User({
             Name:name,
