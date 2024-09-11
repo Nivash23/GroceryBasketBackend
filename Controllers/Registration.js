@@ -40,7 +40,7 @@ RegistrationRouter.post('/login/', async(req,res) => {
 
     const LoginUser = await User.findOne({ Email: email });
 
-    const passAuthenticate = await bcrypt.compare(Password, LoginUser.hashpassword);
+    const passAuthenticate =bcrypt.compare(Password, LoginUser.hashpassword);
 
     if (LoginUser)
     {
